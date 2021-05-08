@@ -24,7 +24,7 @@ class SettingsCellTableView: UITableViewCell {
         image.contentMode = .center
         image.tintColor = .white
         image.layer.masksToBounds = true
-        image.layer.cornerRadius = 8
+        image.layer.cornerRadius = Metric.layerCornerRadius
         return image
     }()
 
@@ -36,24 +36,26 @@ class SettingsCellTableView: UITableViewCell {
     }()
 
     func setupHierarchy() {
-        addSubviews(iconView, titleView, separatorView)
+        addSubview(iconView)
+        addSubview(titleView)
+        addSubview(separatorView)
     }
 
     func setupLayout() {
         iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
-        iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
-        iconView.widthAnchor.constraint(equalTo: iconView.heightAnchor, multiplier: 1).isActive = true
+        iconView.topAnchor.constraint(equalTo: topAnchor, constant: Metric.topIcon).isActive = true
+        iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingIcon).isActive = true
+        iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Metric.bottomIcon).isActive = true
+        iconView.widthAnchor.constraint(equalTo: iconView.heightAnchor, multiplier: Metric.widthIcon).isActive = true
 
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        titleView.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 16).isActive = true
+        titleView.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: Metric.leadingTitle).isActive = true
 
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60).isActive = true
+        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
         separatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        separatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        separatorView.heightAnchor.constraint(equalToConstant: Metric.heightSeparator).isActive = true
     }
 }
