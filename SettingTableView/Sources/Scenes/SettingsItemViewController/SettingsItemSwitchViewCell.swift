@@ -18,8 +18,7 @@ final class SettingsSwitchCell: SettingsCellTableView {
 
     override func setupLayout() {
         super.setupLayout()
-        switchView.translatesAutoresizingMaskIntoConstraints = false
-        switchView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Metric.trailingAnchorSwitch).isActive = true
-        switchView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        switchView.addConstraints(centerY: centerYAnchor,
+                                  trailing: trailingAnchor, paddingTrailing: Metric.trailingAnchorSwitch)
     }
 }

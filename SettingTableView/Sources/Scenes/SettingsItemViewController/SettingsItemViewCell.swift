@@ -42,20 +42,23 @@ class SettingsCellTableView: UITableViewCell {
     }
 
     func setupLayout() {
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.topAnchor.constraint(equalTo: topAnchor, constant: Metric.topIcon).isActive = true
-        iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingIcon).isActive = true
-        iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Metric.bottomIcon).isActive = true
-        iconView.widthAnchor.constraint(equalTo: iconView.heightAnchor, multiplier: Metric.widthIcon).isActive = true
+        iconView.addConstraints(top: topAnchor, paddingTop: Metric.topIcon,
+                                bottom: bottomAnchor, paddingBottom: Metric.bottomIcon,
+                                leading: leadingAnchor, paddingLeading: Metric.leadingIcon,
+                                width: iconView.heightAnchor, paddingWidth: Metric.widthIcon,
+                                height: iconView.heightAnchor, paddingHeight: Metric.heightIcon)
 
-        titleView.translatesAutoresizingMaskIntoConstraints = false
-        titleView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        titleView.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: Metric.leadingTitle).isActive = true
+        titleView.addConstraints(centerY: centerYAnchor,
+                                 leading: iconView.trailingAnchor, paddingLeading: Metric.leadingTitle)
 
-        separatorView.translatesAutoresizingMaskIntoConstraints = false
-        separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
-        separatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        separatorView.heightAnchor.constraint(equalToConstant: Metric.heightSeparator).isActive = true
+        separatorView.addConstraints(bottom: bottomAnchor, trailing: trailingAnchor,
+                                     leading: leadingAnchor, paddingLeading: Metric.leadingSeparator,
+                                     paddingHeight: 1)
+
+//        separatorView.translatesAutoresizingMaskIntoConstraints = false
+//        separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+//        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
+//        separatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+//        separatorView.heightAnchor.constraint(equalToConstant: Metric.heightSeparator).isActive = true
     }
 }

@@ -17,7 +17,8 @@ extension SettingsCellTableView {
         
         static let topIcon: CGFloat = 8
         static let bottomIcon: CGFloat = -8
-        static let widthIcon: CGFloat = 1
+        static let widthIcon: CGFloat = 3
+        static let heightIcon: CGFloat = 3
         static let leadingIcon: CGFloat = 16
 
         static let leadingTitle: CGFloat = 16

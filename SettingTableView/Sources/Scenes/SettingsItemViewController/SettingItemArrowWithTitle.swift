@@ -23,10 +23,8 @@ class SettingslArowWithTitle: SettingsArrowCell {
 
     override func setupLayout() {
         super.setupLayout()
-        detailLabel.translatesAutoresizingMaskIntoConstraints = false
-        detailLabel.trailingAnchor.constraint(equalTo: labelArrow.leadingAnchor,
-                                              constant: Metric.trailingAnchorArrowTitle).isActive = true
-        detailLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        detailLabel.addConstraints(centerY: centerYAnchor,
+                                   trailing: labelArrow.leadingAnchor,
+                                   paddingTrailing: Metric.trailingAnchorArrowTitle)
     }
-
 }

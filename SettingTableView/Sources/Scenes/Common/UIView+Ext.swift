@@ -19,10 +19,10 @@ extension UIView {
         centerY: NSLayoutYAxisAnchor? = nil, centerYPadding: CGFloat = 0,
         top: NSLayoutYAxisAnchor? = nil, paddingTop: CGFloat = 0,
         bottom: NSLayoutYAxisAnchor? = nil, paddingBottom: CGFloat = 0,
-//        trailing: NSLayoutYAxisAnchor? = nil, paddingTrailing: CGFloat = 0,
-//        leading: NSLayoutYAxisAnchor? = nil, paddingLeading: CGFloat = 0,
-        width: CGFloat = 0,
-        height: CGFloat = 0
+        trailing: NSLayoutXAxisAnchor? = nil, paddingTrailing: CGFloat = 0,
+        leading: NSLayoutXAxisAnchor? = nil, paddingLeading: CGFloat = 0,
+        width: NSLayoutDimension? = nil, paddingWidth: CGFloat = 0,
+        height: NSLayoutDimension? = nil, paddingHeight: CGFloat = 0
     ) {
         translatesAutoresizingMaskIntoConstraints = false
 
@@ -40,22 +40,21 @@ extension UIView {
             bottomAnchor.constraint(equalTo: bottom, constant: paddingBottom).isActive = true
         }
 
-//        if let trailing = trailing {
-//            trailingAnchor.constraint(equalTo: trailing, constant: paddingTrailing).isActive = true
-//        }
-//
-//        if let leading = leading {
-//            leadingAnchor.constraint(equalTo: leading, constant: paddingLeading).isActive = true
-//        }
+        if let trailing = trailing {
+            trailingAnchor.constraint(equalTo: trailing, constant: paddingTrailing).isActive = true
+        }
+
+        if let leading = leading {
+            leadingAnchor.constraint(equalTo: leading, constant: paddingLeading).isActive = true
+        }
         
-        // Use the width parameter to set the top constarint
-        if width != 0 {
-            widthAnchor.constraint(equalToConstant: width).isActive = true
+        if let width = width {
+            widthAnchor.constraint(equalTo: width, constant: paddingWidth).isActive = true
         }
 
         // Use the height parameter to set the top constarint
-        if height != 0 {
-            heightAnchor.constraint(equalToConstant: height).isActive = true
+        if let height = height {
+            heightAnchor.constraint(equalTo: height, constant: paddingHeight).isActive = true
         }
     }
 }

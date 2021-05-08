@@ -39,12 +39,8 @@ final class ViewController: UIViewController {
     }
 
     private func setupLayout() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.addConstraints(top: view.topAnchor, bottom: view.bottomAnchor,
+                                 trailing: view.trailingAnchor, leading: view.leadingAnchor)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

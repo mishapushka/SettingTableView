@@ -24,8 +24,7 @@ class SettingsArrowCell: SettingsCellTableView {
 
     override func setupLayout() {
         super.setupLayout()
-        labelArrow.translatesAutoresizingMaskIntoConstraints = false
-        labelArrow.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Metric.trailingAnchorArrow).isActive = true
-        labelArrow.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        labelArrow.addConstraints(centerY: centerYAnchor,
+                                  trailing: trailingAnchor, paddingTrailing: Metric.trailingAnchorArrow)
     }
 }
