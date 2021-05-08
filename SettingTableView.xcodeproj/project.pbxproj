@@ -18,7 +18,7 @@
 		04CFCBEE26466C0500172252 /* SettingItemArrowWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBED26466C0500172252 /* SettingItemArrowWithTitle.swift */; };
 		04CFCBF52646705600172252 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBF42646705600172252 /* Section.swift */; };
 		04CFCBFE2646739D00172252 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBFD2646739D00172252 /* UIView+Ext.swift */; };
-		04CFCC0226467DB500172252 /* MetricSettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCC0126467DB500172252 /* MetricSettingsItem.swift */; };
+		04CFCC0226467DB500172252 /* SettingsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCC0126467DB500172252 /* SettingsLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		04CFCBED26466C0500172252 /* SettingItemArrowWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemArrowWithTitle.swift; sourceTree = "<group>"; };
 		04CFCBF42646705600172252 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		04CFCBFD2646739D00172252 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		04CFCC0126467DB500172252 /* MetricSettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricSettingsItem.swift; sourceTree = "<group>"; };
+		04CFCC0126467DB500172252 /* SettingsLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +109,7 @@
 		04CFCBE026466A1900172252 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CFCC0126467DB500172252 /* SettingsLine.swift */,
 				04CFCBF42646705600172252 /* Section.swift */,
 			);
 			path = Model;
@@ -136,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				04CFCBFD2646739D00172252 /* UIView+Ext.swift */,
-				04CFCC0126467DB500172252 /* MetricSettingsItem.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				04CFCBC1264668CE00172252 /* AppDelegate.swift in Sources */,
 				04CFCBEE26466C0500172252 /* SettingItemArrowWithTitle.swift in Sources */,
 				04CFCBF52646705600172252 /* Section.swift in Sources */,
-				04CFCC0226467DB500172252 /* MetricSettingsItem.swift in Sources */,
+				04CFCC0226467DB500172252 /* SettingsLine.swift in Sources */,
 				04CFCBDD264669E600172252 /* MainTabBarController.swift in Sources */,
 				04CFCBE826466BCE00172252 /* SettingsItemSwitchViewCell.swift in Sources */,
 			);

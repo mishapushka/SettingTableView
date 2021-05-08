@@ -51,14 +51,30 @@ class SettingsCellTableView: UITableViewCell {
         titleView.addConstraints(centerY: centerYAnchor,
                                  leading: iconView.trailingAnchor, paddingLeading: Metric.leadingTitle)
 
-        separatorView.addConstraints(bottom: bottomAnchor, trailing: trailingAnchor,
-                                     leading: leadingAnchor, paddingLeading: Metric.leadingSeparator,
-                                     paddingHeight: 1)
+        separatorView.translatesAutoresizingMaskIntoConstraints = false
+        separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
+        separatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        separatorView.heightAnchor.constraint(equalToConstant: Metric.heightSeparator).isActive = true
+    }
+}
 
-//        separatorView.translatesAutoresizingMaskIntoConstraints = false
-//        separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-//        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
-//        separatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-//        separatorView.heightAnchor.constraint(equalToConstant: Metric.heightSeparator).isActive = true
+extension SettingsCellTableView {
+
+    enum Metric {
+        static let layerCornerRadius: CGFloat = 8
+        static let trailingAnchorSwitch: CGFloat = -16
+        static let trailingAnchorArrow: CGFloat = -16
+        static let trailingAnchorArrowTitle: CGFloat = -16
+
+        static let topIcon: CGFloat = 8
+        static let bottomIcon: CGFloat = -8
+        static let widthIcon: CGFloat = 3
+        static let heightIcon: CGFloat = 3
+        static let leadingIcon: CGFloat = 16
+
+        static let leadingTitle: CGFloat = 16
+        static let leadingSeparator: CGFloat = 60
+        static let heightSeparator: CGFloat = 0.5
     }
 }
