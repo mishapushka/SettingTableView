@@ -13,6 +13,11 @@
 		04CFCBCD264668D100172252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CFCBCB264668D100172252 /* LaunchScreen.storyboard */; };
 		04CFCBDD264669E600172252 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBDC264669E600172252 /* MainTabBarController.swift */; };
 		04CFCBE426466B7200172252 /* SettingsItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBE326466B7200172252 /* SettingsItemViewCell.swift */; };
+		04CFCBE826466BCE00172252 /* SettingsItemSwitchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBE726466BCE00172252 /* SettingsItemSwitchViewCell.swift */; };
+		04CFCBEB26466BE200172252 /* SettingItemArrowViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBEA26466BE200172252 /* SettingItemArrowViewCell.swift */; };
+		04CFCBEE26466C0500172252 /* SettingItemArrowWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBED26466C0500172252 /* SettingItemArrowWithTitle.swift */; };
+		04CFCBF52646705600172252 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBF42646705600172252 /* Section.swift */; };
+		04CFCBF92646719E00172252 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBF82646719E00172252 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		04CFCBCE264668D100172252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CFCBDC264669E600172252 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		04CFCBE326466B7200172252 /* SettingsItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemViewCell.swift; sourceTree = "<group>"; };
+		04CFCBE726466BCE00172252 /* SettingsItemSwitchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemSwitchViewCell.swift; sourceTree = "<group>"; };
+		04CFCBEA26466BE200172252 /* SettingItemArrowViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemArrowViewCell.swift; sourceTree = "<group>"; };
+		04CFCBED26466C0500172252 /* SettingItemArrowWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemArrowWithTitle.swift; sourceTree = "<group>"; };
+		04CFCBF42646705600172252 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		04CFCBF82646719E00172252 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 		04CFCBD92646698700172252 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				04CFCBF72646719100172252 /* App */,
 				04CFCBDB264669B100172252 /* Scenes */,
 			);
 			path = Sources;
@@ -95,6 +106,7 @@
 		04CFCBE026466A1900172252 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CFCBF42646705600172252 /* Section.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,8 +115,19 @@
 			isa = PBXGroup;
 			children = (
 				04CFCBE326466B7200172252 /* SettingsItemViewCell.swift */,
+				04CFCBE726466BCE00172252 /* SettingsItemSwitchViewCell.swift */,
+				04CFCBEA26466BE200172252 /* SettingItemArrowViewCell.swift */,
+				04CFCBED26466C0500172252 /* SettingItemArrowWithTitle.swift */,
 			);
 			path = SettingsItemViewController;
+			sourceTree = "<group>";
+		};
+		04CFCBF72646719100172252 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				04CFCBF82646719E00172252 /* Extension.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CFCBF92646719E00172252 /* Extension.swift in Sources */,
 				04CFCBE426466B7200172252 /* SettingsItemViewCell.swift in Sources */,
 				04CFCBC5264668CE00172252 /* ViewController.swift in Sources */,
+				04CFCBEB26466BE200172252 /* SettingItemArrowViewCell.swift in Sources */,
 				04CFCBC1264668CE00172252 /* AppDelegate.swift in Sources */,
+				04CFCBEE26466C0500172252 /* SettingItemArrowWithTitle.swift in Sources */,
+				04CFCBF52646705600172252 /* Section.swift in Sources */,
 				04CFCBDD264669E600172252 /* MainTabBarController.swift in Sources */,
+				04CFCBE826466BCE00172252 /* SettingsItemSwitchViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
