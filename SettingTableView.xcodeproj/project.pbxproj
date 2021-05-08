@@ -12,6 +12,7 @@
 		04CFCBCA264668D100172252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CFCBC9264668D100172252 /* Assets.xcassets */; };
 		04CFCBCD264668D100172252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CFCBCB264668D100172252 /* LaunchScreen.storyboard */; };
 		04CFCBDD264669E600172252 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBDC264669E600172252 /* MainTabBarController.swift */; };
+		04CFCBE426466B7200172252 /* SettingsItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFCBE326466B7200172252 /* SettingsItemViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		04CFCBCC264668D100172252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CFCBCE264668D100172252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CFCBDC264669E600172252 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		04CFCBE326466B7200172252 /* SettingsItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				04CFCBE026466A1900172252 /* Model */,
 				04CFCBDA2646699500172252 /* Main */,
+				04CFCBE226466B5400172252 /* SettingsItemViewController */,
 				04CFCBC4264668CE00172252 /* ViewController.swift */,
 			);
 			path = Scenes;
@@ -94,6 +97,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04CFCBE226466B5400172252 /* SettingsItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04CFCBE326466B7200172252 /* SettingsItemViewCell.swift */,
+			);
+			path = SettingsItemViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CFCBE426466B7200172252 /* SettingsItemViewCell.swift in Sources */,
 				04CFCBC5264668CE00172252 /* ViewController.swift in Sources */,
 				04CFCBC1264668CE00172252 /* AppDelegate.swift in Sources */,
 				04CFCBDD264669E600172252 /* MainTabBarController.swift in Sources */,
