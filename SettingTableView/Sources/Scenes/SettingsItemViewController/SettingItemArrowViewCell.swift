@@ -9,22 +9,22 @@ import UIKit
 
 class SettingsArrowCell: SettingsCellTableView {
 
-    lazy var labelArrow: UILabel = {
-        let labelArrow = UILabel()
-        labelArrow.text = "＞"
-        labelArrow.textColor = .lightGray
-
-        return labelArrow
+    lazy var iconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "＞")
+        imageView.tintColor = .black
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
 
     override func setupHierarchy() {
         super.setupHierarchy()
-        addSubview(labelArrow)
+        addSubview(iconImageView)
     }
 
     override func setupLayout() {
         super.setupLayout()
-        labelArrow.addConstraints(centerY: centerYAnchor,
+        iconImageView.addConstraints(centerY: centerYAnchor,
                                   trailing: trailingAnchor, paddingTrailing: Metric.trailingAnchorArrow)
     }
 }

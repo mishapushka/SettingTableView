@@ -24,7 +24,7 @@ class SettingslArowWithTitle: SettingsArrowCell {
     override func setupLayout() {
         super.setupLayout()
         detailLabel.addConstraints(centerY: centerYAnchor,
-                                   trailing: labelArrow.leadingAnchor,
+                                   trailing: iconImageView.leadingAnchor,
                                    paddingTrailing: Metric.trailingAnchorArrowTitle)
     }
 }
