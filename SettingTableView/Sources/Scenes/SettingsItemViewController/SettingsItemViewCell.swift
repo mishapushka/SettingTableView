@@ -54,13 +54,7 @@ class SettingsCellTableView: UITableViewCell {
         separatorView.addConstraints(bottom: bottomAnchor,
                                      trailing: trailingAnchor,
                                      leading: leadingAnchor,
-                                     paddingHeight: Metric.heightSeparator)
-
-        separatorView.translatesAutoresizingMaskIntoConstraints = false
-        separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
-        separatorView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        separatorView.heightAnchor.constraint(equalToConstant: Metric.heightSeparator).isActive = true
+                                     heightToConstant: Metric.heightSeparator)
     }
 }
 

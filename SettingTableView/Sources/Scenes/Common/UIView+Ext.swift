@@ -22,7 +22,8 @@ extension UIView {
         trailing: NSLayoutXAxisAnchor? = nil, paddingTrailing: CGFloat = 0,
         leading: NSLayoutXAxisAnchor? = nil, paddingLeading: CGFloat = 0,
         width: NSLayoutDimension? = nil, paddingWidth: CGFloat = 0,
-        height: NSLayoutDimension? = nil, paddingHeight: CGFloat = 0
+        height: NSLayoutDimension? = nil, paddingHeight: CGFloat = 0,
+        heightToConstant: CGFloat = 0
     ) {
         translatesAutoresizingMaskIntoConstraints = false
 
@@ -55,6 +56,9 @@ extension UIView {
         // Use the height parameter to set the top constarint
         if let height = height {
             heightAnchor.constraint(equalTo: height, constant: paddingHeight).isActive = true
+        }
+        if heightToConstant != 0 {
+            heightAnchor.constraint(equalToConstant: heightToConstant).isActive = true
         }
     }
 }
