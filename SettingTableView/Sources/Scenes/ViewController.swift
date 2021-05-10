@@ -78,6 +78,7 @@ extension ViewController: UITableViewDataSource {
             cell.iconView.backgroundColor = line.iconeBackgrounColor
             cell.titleView.text = line.title
             cell.iconView.image = line.icone
+            cell.accessoryType = .disclosureIndicator
             return cell
 
         case .arrowWithTitle:
@@ -88,6 +89,7 @@ extension ViewController: UITableViewDataSource {
             cell.titleView.text = line.title
             cell.iconView.image = line.icone
             cell.detailLabel.text = line.detailLabel
+            cell.accessoryType = .disclosureIndicator
             return cell
         }
     }

@@ -51,6 +51,11 @@ class SettingsCellTableView: UITableViewCell {
         titleView.addConstraints(centerY: centerYAnchor,
                                  leading: iconView.trailingAnchor, paddingLeading: Metric.leadingTitle)
 
+        separatorView.addConstraints(bottom: bottomAnchor,
+                                     trailing: trailingAnchor,
+                                     leading: leadingAnchor,
+                                     paddingHeight: Metric.heightSeparator)
+
         separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metric.leadingSeparator).isActive = true
@@ -74,7 +79,7 @@ extension SettingsCellTableView {
         static let leadingIcon: CGFloat = 16
 
         static let leadingTitle: CGFloat = 16
-        static let leadingSeparator: CGFloat = 60
+        static let leadingSeparator: CGFloat = 50
         static let heightSeparator: CGFloat = 0.5
     }
 }

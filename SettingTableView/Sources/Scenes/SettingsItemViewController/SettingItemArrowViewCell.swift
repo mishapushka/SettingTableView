@@ -9,13 +9,7 @@ import UIKit
 
 class SettingsArrowCell: SettingsCellTableView {
 
-    lazy var iconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "＞")
-        imageView.tintColor = .black
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
+    lazy var iconImageView = UIImageView()
 
     override func setupHierarchy() {
         super.setupHierarchy()
